@@ -36,7 +36,6 @@ namespace TextModerationIntgTests
 
             AzureTextApi = new AzureTextModerationApi(ConfigProvider);
             AzureTermListApi = new AzureTermListApi(ConfigProvider);
-            SetupBadWordList();
         }
 
         [Test]
