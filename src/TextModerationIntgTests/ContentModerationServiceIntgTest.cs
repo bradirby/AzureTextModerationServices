@@ -16,7 +16,6 @@ namespace TextModerationIntgTests
         private ContentModerationService sut { get; set; }
         private IAzureTextModerationAPI AzureTextApi { get; set; }
         private IAzureTermListApi AzureTermListApi { get; set; }
-        private IConfigurationProvider ConfigProvider { get; set; }
         private AzureTermList BadWordlist {
             get
             {
@@ -32,10 +31,9 @@ namespace TextModerationIntgTests
         {
             var cfg = new ConfigurationProvider();
             cfg.LoadNamedConfiguration("INTGTEST");
-            ConfigProvider = cfg;
 
-            AzureTextApi = new AzureTextModerationApi(ConfigProvider);
-            AzureTermListApi = new AzureTermListApi(ConfigProvider);
+            AzureTextApi = new AzureTextModerationApi(cfg);
+            AzureTermListApi = new AzureTermListApi(cfg);
         }
 
         [Test]
