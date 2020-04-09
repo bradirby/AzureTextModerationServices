@@ -1,4 +1,4 @@
-# AzureContentRepository
+# AzureTextModerationServices
 Azure Text Moderation Services
 
 This project contains services that allow access to the Azure text moderation services.  
